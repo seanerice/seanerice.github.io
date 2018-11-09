@@ -1,1 +1,126 @@
-hello
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <environment names="Development">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <script src="~/bundles/modernizr"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    </environment>
+    <environment names="Staging,Production">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <script src="~/bundles/modernizr"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    </environment>
+    <style>
+        .card-deck {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        @@media only screen and (max-width: 768px) {
+            [class*="col-"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/index">Sean Rice</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="@Url.Action("About", "Home")">About<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="@Url.Action("Index", "Projects")">Projects</a>
+                <a class="nav-item nav-link" href="@Url.Action("Contact", "Home")">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container col-8">	
+		<div class="jumbotron shadow-sm rounded" style="margin-bottom:15px;">
+			<h1>ASP.NET</h1>
+			<p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+			<p><a href="" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+		</div>
+
+		<div class="card-deck">
+			<div class="card shadow-sm bg-white rounded">
+				<div class="card-body">
+					<h5>About</h5>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<a href="/about" class="btn btn-primary">Check it out!</a>
+				</div>
+			</div>
+			<div class="card shadow-sm bg-white rounded">
+				<div class="card-body">
+					<h5>Projects</h5>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<a href="/projects" class="btn btn-primary">Check it out!</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="card-deck">
+			<div class="card shadow-sm bg-white rounded">
+				<img class="card-img-top" src="~/images/Personal/Mk1_2.jpg" alt="Card image cap">
+				<div class="card-body">
+					<h5>About</h5>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<a href="" class="btn btn-primary">Check it out!</a>
+				</div>
+			</div>
+		</div>
+		
+		
+        <hr />
+        <footer>
+            <p>2018 - Sean Rice</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+<div class="jumbotron shadow-sm rounded" style="margin-bottom:15px;">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="card-deck">
+    <div class="card shadow-sm bg-white rounded">
+        <div class="card-body">
+            <h5>About</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="/about" class="btn btn-primary">Check it out!</a>
+        </div>
+    </div>
+    <div class="card shadow-sm bg-white rounded">
+        <div class="card-body">
+            <h5>Projects</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="/projects" class="btn btn-primary">Check it out!</a>
+        </div>
+    </div>
+</div>
+
+<div class="card-deck">
+    <div class="card shadow-sm bg-white rounded">
+        <img class="card-img-top" src="~/images/Personal/Mk1_2.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5>About</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="" class="btn btn-primary">Check it out!</a>
+        </div>
+    </div>
+</div>
